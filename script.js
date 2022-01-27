@@ -35,7 +35,7 @@ const validateNumber = (value) => {
 };
 
 const validateEmail = (value) => {
-  const rules = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/g;
+  const rules = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
   return rules.test(value);
 };
 
@@ -85,7 +85,3 @@ const isMultiField = field.type === 'radio' || field.type === 'checkbox';
   }
 }
 
-
-// document.addEventListener("DOMContentLoaded", function(event) {
-
-//   }); 
