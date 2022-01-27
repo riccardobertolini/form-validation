@@ -12,9 +12,11 @@ function validateForm(event) {
   hideErrors();
   const fields = document.querySelectorAll('.form-input');
   const errors = Array.from(fields).map(field => validateField(field)).filter(item => item);
+    
   if(errors.length === 0) {
     return true;   
   }
+    
   showErrors(errors);
   return false;
 }
@@ -45,7 +47,6 @@ const validateDate = (value) => {
   return rules.test(value);
 };
 
-
 const isEmpty = (value) => value === '' || value === undefined || value.length === 0;
 
 const isMultiFieldEmpty = (field) => {
@@ -55,8 +56,8 @@ const isMultiFieldEmpty = (field) => {
 const getBoolean = (value) => value === 'true';
 
 const validateField = (field) => {
-const isRequired = getBoolean(field?.attributes['data-required'].value);
-const isMultiField = field.type === 'radio' || field.type === 'checkbox';
+  const isRequired = getBoolean(field?.attributes['data-required'].value);
+  const isMultiField = field.type === 'radio' || field.type === 'checkbox';
   
   if(isRequired && isMultiField && isMultiFieldEmpty(field)) { 
     return `${field.name}-error-1`;
@@ -65,6 +66,7 @@ const isMultiField = field.type === 'radio' || field.type === 'checkbox';
   if(isRequired && isEmpty(field.value)) {
     return `${field.name}-error-1`;
   }
+    
   if(!isEmpty(field.value)) {
     switch(field.type){
         case 'text':
