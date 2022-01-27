@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
 <body>
+  <style>
+    .field-error {
+      color: red;
+    }
 
+    .hidden {
+      display: none;  
+    }
+  </style>
   <form onsubmit="return validateForm();" action="#form" method="POST" novalidate="">
   <div class="field-wrapper">
     <div><label class="form-label" for="FirstName">First name</label><span class="asterisk"> *</span></div><input type="text" class="form-input" id="FirstName" name="FirstName" data-required="true" placeholder="" value="">
