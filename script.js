@@ -12,6 +12,9 @@ function validateForm(event) {
   hideErrors();
   const fields = document.querySelectorAll('.form-input');
   const errors = Array.from(fields).map(field => validateField(field)).filter(item => item);
+  if(errors.length === 0) {
+    return true;   
+  }
   showErrors(errors);
   return false;
 }
