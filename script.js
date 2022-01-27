@@ -22,7 +22,7 @@ const validateText = (value) => {
 };
 
 const validatePhone = (value) => {
-  const rules = /^1?[\(\- ]*\d{3}[\)-\. ]*\d{3}[-\. ]*\d{4}$/g;
+  const rules = /^(?:\+?1[-.●]?)?\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/;
   return rules.test(value);
 };
 
