@@ -13,7 +13,7 @@
   </style>
   <div class="container">
     <hr />
-    <h1>Form validation in JavaScript</h1>
+    <h1>Form validation in JavaScript</h1><br/><br/>
     <form onsubmit="return validateForm();" action="#form" method="POST" novalidate="">
     <div class="field-wrapper">
       <div><label class="form-label" for="FirstName">First name</label><span class="asterisk"> *</span></div><input type="text" class="form-input" id="FirstName" name="FirstName" data-required="true" placeholder="" value="">
@@ -37,7 +37,7 @@
     </div>
     <div class="field-wrapper">
       <div>
-        <div class="question">State</div><span class="asterisk"> *</span>
+        <div class="question">State<span class="asterisk"> *</span></div>
       </div><select class="form-input" id="State" name="State" data-required="true">
         <option value="" disabled="" selected=""></option>
         <option value="AK">Alaska</option>
@@ -104,7 +104,19 @@
       <div class="field-error hidden" id="PostalCode-error-1">Field required</div>
       <div class="field-error hidden" id="PostalCode-error-2">Value not valid</div>
     </div>
-
+    <div class="field-wrapper">
+      <div><label class="form-label" >Choose an option</label><span class="asterisk"> *</span></div>
+      <input type="checkbox" class="form-input" id="option1" name="option1" data-required="true" placeholder="" value="">
+      <label for="option1"> I have a bike</label><br>
+      <input type="checkbox" class="form-input" id="option2" name="option2" data-required="true" placeholder="" value="">
+      <label for="option2"> I have a car</label><br>
+      <input type="checkbox" class="form-input" id="option3" name="option3" data-required="true" placeholder="" value="">
+      <label for="option3"> I have an airplane</label><br>
+      <div class="field-error hidden" id="PostalCode-error-1">Field required</div>
+      <div class="field-error hidden" id="PostalCode-error-2">Value not valid</div>
+    </div>
+    <br/>
+    <br/>
     <div class="submit-button-container">
       <button class="submit submit-form" type="submit" name="submit" id="submit-button">View Au Pairs</button>
     </div>
