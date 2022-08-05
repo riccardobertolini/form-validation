@@ -6,14 +6,17 @@
     .field-error {
       color: red;
     }
-
     .hidden {
       display: none;  
+    }
+    .header {
+      width: 100%;
+      margin-bottom: 100px;
     }
   </style>
   <div class="container">
     <hr />
-    <h1>Form validation in JavaScript</h1><br/><br/>
+    <div class="header"><h1>Form validation in JavaScript</h1></div>
     <form onsubmit="return validateForm();" action="/" method="POST" novalidate="">
     <div class="field-wrapper">
       <div><label class="form-label" for="FirstName">First name</label><span class="asterisk"> *</span></div><input type="text" class="form-input" id="FirstName" name="FirstName" data-required="true" placeholder="" value="">
